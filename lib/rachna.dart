@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kartify_applicaion/widgets/s.dart';
 
 class ClassRachana extends StatelessWidget {
