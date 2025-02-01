@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:kartify_applicaion/fonts/normal_font.dart';
 import 'package:kartify_applicaion/widgets/login_conainer_widget.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
 
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _LoginScreenState createState() => _LoginScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen>
+class _LoginScreenState extends State<LoginScreen>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late List<ScrollController> _scrollControllers;
@@ -165,6 +166,7 @@ class _HomeScreenState extends State<HomeScreen>
             Expanded(
               flex: 1,
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   LoginContainerWidget(
                     imagePath: 'assets/svg_images/email.svg',
@@ -177,6 +179,22 @@ class _HomeScreenState extends State<HomeScreen>
                   LoginContainerWidget(
                     imagePath: 'assets/svg_images/apple.svg',
                     text: 'Continue with Apple',
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        NormalTextWidget(text: "Already have an account?", color: Colors.grey,),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 15),
+                          child: NormalTextWidget(
+                            text: "Sign in",
+                            color: const Color.fromARGB(255, 60, 132, 252),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),

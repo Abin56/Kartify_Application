@@ -15,11 +15,11 @@ class LoginContainerWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 10, left: 25, right: 25),
       child: Container(
-        padding: EdgeInsets.all(3.5),
+        padding: EdgeInsets.all(10),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
             border: Border.all(
-              color: Colors.grey.shade400,
+              color: Colors.grey.shade300,
             )),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -30,10 +30,10 @@ class LoginContainerWidget extends StatelessWidget {
                   imagePath,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 10),
+                  padding: const EdgeInsets.only(left: 15),
                   child: Text(
                     text,
-                    style: TextStyle(fontWeight: FontWeight.w700),
+                    style: TextStyle(fontSize: 16)
                   ),
                 )
               ],
