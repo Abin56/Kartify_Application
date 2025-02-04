@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kartify_applicaion/fonts/normal_font.dart';
+import 'package:kartify_applicaion/routes/routes.dart';
 import 'package:kartify_applicaion/widgets/login_conainer_widget.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -188,9 +189,14 @@ class _LoginScreenState extends State<LoginScreen>
                         NormalTextWidget(text: "Already have an account?", color: Colors.grey,),
                         Padding(
                           padding: const EdgeInsets.only(left: 15),
-                          child: NormalTextWidget(
-                            text: "Sign in",
-                            color: const Color.fromARGB(255, 60, 132, 252),
+                          child: GestureDetector(
+                            onTap: (){
+                              Navigator.pushNamed(context, AppRoutes.signinScreen);
+                            },
+                            child: NormalTextWidget(
+                              text: "Sign in",
+                              color: const Color.fromARGB(255, 60, 132, 252),
+                            ),
                           ),
                         ),
                       ],
