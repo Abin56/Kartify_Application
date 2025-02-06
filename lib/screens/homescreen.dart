@@ -3,7 +3,7 @@ import 'package:kartify_applicaion/constants/sizes.dart';
 import 'package:kartify_applicaion/fonts/normal_font.dart';
 
 class Homescreen extends StatelessWidget {
-  const Homescreen({super.key});
+  Homescreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,60 +15,73 @@ class Homescreen extends StatelessWidget {
           child: Column(
         children: [
           Container(
-            color: Colors.blueAccent,
-            height: 100,
+            color: const Color.fromARGB(255, 39, 119, 252),
+            height: 80,
             width: double.infinity,
-            child:  Image.asset('assets/images/kartify_logo.png',
-        
-          ),),
-          h20sizedbox,
-          NormalTextWidget(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  height: 30,
+                  child: Image.asset(
+                    'assets/images/kartify_logo.png',
+                  ),
+                ),
+              ],
+            ),
+          ),
+          ListTile(
+            leading: Container(
+              height: 50,
+              width: 50,
+              decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                    fit: BoxFit.fitHeight,
+                    image: AssetImage('assets/images/profile_women.png'),
+                  )),
+            ),
+            title: NormalTextWidget(
               text: "Smitha Williams",
               fontWeight: FontWeight.w500,
-              fontSize: 18),
-          NormalTextWidget(
-            text: "Edit Account",
-            color: Colors.grey,
-            fontSize: 16,
+              fontSize: 18,
+            ),
+            subtitle: NormalTextWidget(
+                text: "Edit Account", color: Colors.grey, fontSize: 13),
           ),
-          Row(
-            children: [Icon(Icons.home), w20sizedbox, Text("Home")],
-          ),
-          h20sizedbox,
-          Row(
-            children: [Icon(Icons.category), w20sizedbox, Text("Category")],
-          ),
-          h20sizedbox,
-          Row(
-            children: [Icon(Icons.shopping_basket), w20sizedbox, Text("Cart")],
-          ),
-          h20sizedbox,
-          Row(
-            children: [Icon(Icons.heart_broken), w20sizedbox, Text("Wishlist")],
-          ),
-          h20sizedbox,
-          Row(
-            children: [Icon(Icons.person), w20sizedbox, Text("Profile")],
-          ),
-          h20sizedbox,
-          Row(
-            children: [Icon(Icons.pages), w20sizedbox, Text("Template Pages")],
-          ),
-          h20sizedbox,
-          Row(
-            children: [
-              Icon(Icons.pages_rounded),
-              w20sizedbox,
-              Text("Template Elements")
-            ],
-          ),
-          h20sizedbox,
-          Row(
-            children: [Icon(Icons.currency_exchange), w20sizedbox, Text("RTL")],
-          ),
-          h20sizedbox,
-          Row(
-            children: [Icon(Icons.brush), w20sizedbox, Text("Dark")],
+          SizedBox(
+            height: 500,
+            child: ListView.separated(
+              itemBuilder: (context, index) {
+                String text =
+                    drawerIconImages.keys.elementAt(index); 
+                String imagePath = drawerIconImages[text]!; 
+
+                return Row(
+                  children: [
+                    Container(
+                      width: 20, // Set width for image container
+                      height: 20, // Set height for image container
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image:
+                              AssetImage(imagePath), // Use image path from map
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 10), // Add spacing
+                    NormalTextWidget(
+                      fontSize: 14,
+                      text: text), // Use text from map
+                  ],
+                );
+              },
+              separatorBuilder: (context, index) {
+                return h10sizedbox;
+              },
+              itemCount: drawerIconImages.length,
+            ),
           ),
           Container(
             height: 50,
@@ -83,4 +96,16 @@ class Homescreen extends StatelessWidget {
       )),
     );
   }
+
+  final Map<String, String> drawerIconImages = {
+    "Home": "assets/images/Drawer/home.png",
+    "Category": "assets/images/Drawer/category.png",
+    "Cart": "assets/images/Drawer/category.png",
+    "Wishlist": "assets/images/Drawer/category.png",
+    "Profile": "assets/images/Drawer/category.png",
+    "Template Pages": "assets/images/Drawer/category.png",
+    "Template Elements": "assets/images/Drawer/category.png",
+    "RTL": "assets/images/Drawer/category.png",
+    "Dark": "assets/images/Drawer/category.png"
+  };
 }

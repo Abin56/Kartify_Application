@@ -15,7 +15,7 @@ class AppRoutes {
       loginScreen: (context) => const LoginScreen(),
       splashScreen: (context) => const SplashScreen(),
       signinScreen: (context) => const SignInScreen(),
-      homeScreen: (context) => const Homescreen(),
+      homeScreen: (context) =>  Homescreen(),
     };
   }
 }
