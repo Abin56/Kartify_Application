@@ -17,8 +17,9 @@ class MyApp extends StatelessWidget {
         appBarTheme: AppBarTheme(color: cWhite),
       ),
       debugShowCheckedModeBanner: false,
-      initialRoute: AppRoutes.splashScreen,
+      initialRoute: AppRoutes.homeScreen,
       routes: AppRoutes.getRoutes(),
     );
   }
 }
+//
