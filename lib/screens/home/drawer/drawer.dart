@@ -2,17 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:kartify_applicaion/constants/sizes.dart';
 import 'package:kartify_applicaion/fonts/normal_font.dart';
 
-class Homescreen extends StatelessWidget {
-  Homescreen({super.key});
+class DrawerWidget extends StatelessWidget {
+  const DrawerWidget({
+    super.key,
+    required this.drawerIconImages,
+  });
+
+  final Map<String, String> drawerIconImages;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("HomeScreen"),
-      ),
-      drawer: Drawer(
-          child: Column(
+    return Drawer(
+      child: Column(
         children: [
           Container(
             color: const Color.fromARGB(255, 39, 119, 252),
@@ -35,7 +36,7 @@ class Homescreen extends StatelessWidget {
             leading: Container(
               height: 50,
               width: 50,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
                     fit: BoxFit.fitHeight,
@@ -57,25 +58,23 @@ class Homescreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 String text = drawerIconImages.keys.elementAt(index);
                 String imagePath = drawerIconImages[text]!;
-
+    
                 return Row(
                   children: [
                     w20sizedbox,
                     h20sizedbox,
                     Container(
-                      width: 20, // Set width for image container
-                      height: 20, // Set height for image container
+                      width: 20,
+                      height: 20,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image:
-                              AssetImage(imagePath), // Use image path from map
+                          image: AssetImage(imagePath),
                           fit: BoxFit.cover,
                         ),
                       ),
                     ),
-                    const SizedBox(width: 10), // Add spacing
-                    NormalTextWidget(
-                        fontSize: 14, text: text), // Use text from map
+                    const SizedBox(width: 10),
+                    NormalTextWidget(fontSize: 14, text: text),
                   ],
                 );
               },
@@ -89,25 +88,13 @@ class Homescreen extends StatelessWidget {
             height: 50,
             width: double.infinity,
             color: Colors.lightBlueAccent,
-            child: Row(
+            child: const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [Icon(Icons.logout), Text("Logout")],
             ),
           )
         ],
-      )),
+      ),
     );
   }
-
-  final Map<String, String> drawerIconImages = {
-    "Home": "assets/images/Drawer/home.png",
-    "Category": "assets/images/Drawer/category.png",
-    "Cart": "assets/images/Drawer/shopping-cart.png",
-    "Wishlist": "assets/images/Drawer/love.png",
-    "Profile": "assets/images/Drawer/user.png",
-    "Template Pages": "assets/images/Drawer/Template Pages.png",
-    "Template Elements": "assets/images/Drawer/Template Elements.png",
-    "RTL": "assets/images/Drawer/RTL.png",
-    "Dark": "assets/images/Drawer/.png"
-  };
 }

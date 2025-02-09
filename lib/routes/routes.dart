@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kartify_applicaion/screens/homescreen.dart';
+import 'package:kartify_applicaion/screens/home/homescreen.dart';
 import 'package:kartify_applicaion/screens/login_screen.dart';
 import 'package:kartify_applicaion/screens/sign_in_screen.dart';
 import 'package:kartify_applicaion/screens/splash_screen.dart';
