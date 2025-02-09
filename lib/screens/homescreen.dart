@@ -49,16 +49,18 @@ class Homescreen extends StatelessWidget {
             subtitle: NormalTextWidget(
                 text: "Edit Account", color: Colors.grey, fontSize: 13),
           ),
+          h20sizedbox,
           SizedBox(
             height: 500,
             child: ListView.separated(
               itemBuilder: (context, index) {
-                String text =
-                    drawerIconImages.keys.elementAt(index); 
-                String imagePath = drawerIconImages[text]!; 
+                String text = drawerIconImages.keys.elementAt(index);
+                String imagePath = drawerIconImages[text]!;
 
                 return Row(
                   children: [
+                    w20sizedbox,
+                    h20sizedbox,
                     Container(
                       width: 20, // Set width for image container
                       height: 20, // Set height for image container
@@ -72,8 +74,7 @@ class Homescreen extends StatelessWidget {
                     ),
                     const SizedBox(width: 10), // Add spacing
                     NormalTextWidget(
-                      fontSize: 14,
-                      text: text), // Use text from map
+                        fontSize: 14, text: text), // Use text from map
                   ],
                 );
               },
@@ -100,12 +101,12 @@ class Homescreen extends StatelessWidget {
   final Map<String, String> drawerIconImages = {
     "Home": "assets/images/Drawer/home.png",
     "Category": "assets/images/Drawer/category.png",
-    "Cart": "assets/images/Drawer/category.png",
-    "Wishlist": "assets/images/Drawer/category.png",
-    "Profile": "assets/images/Drawer/category.png",
-    "Template Pages": "assets/images/Drawer/category.png",
-    "Template Elements": "assets/images/Drawer/category.png",
-    "RTL": "assets/images/Drawer/category.png",
-    "Dark": "assets/images/Drawer/category.png"
+    "Cart": "assets/images/Drawer/shopping-cart.png",
+    "Wishlist": "assets/images/Drawer/love.png",
+    "Profile": "assets/images/Drawer/user.png",
+    "Template Pages": "assets/images/Drawer/Template Pages.png",
+    "Template Elements": "assets/images/Drawer/Template Elements.png",
+    "RTL": "assets/images/Drawer/RTL.png",
+    "Dark": "assets/images/Drawer/.png"
   };
 }
