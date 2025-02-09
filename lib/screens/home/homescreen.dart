@@ -4,6 +4,7 @@ import 'package:kartify_applicaion/screens/cart/cart_screen.dart';
 import 'package:kartify_applicaion/screens/category/category_screen.dart';
 import 'package:kartify_applicaion/screens/home/drawer/drawer.dart';
 import 'package:kartify_applicaion/screens/home/nav_bar/nav_bar.dart';
+import 'package:kartify_applicaion/screens/profile/profile_screen.dart';
 import 'package:kartify_applicaion/screens/wishlist/wishlist_screen.dart';
 
 class Homescreen extends StatefulWidget {
@@ -18,11 +19,11 @@ class _HomescreenState extends State<Homescreen> {
 
   // List of pages corresponding to the navbar index
   final List<Widget> _pages = [
-    CategoryScreen(), // Index 0 (Fixed Circular Reference)
+    UserProfileScreen(), // Index 0 (Fixed Circular Reference)
     CategoryScreen(), // Index 1
     CartScreen(), // Index 2
     WishListScreen(), // Index 3
-    WishListScreen(), // Index 4
+    UserProfileScreen(), // Index 4
   ];
 
   onPageChanged(int page) {
