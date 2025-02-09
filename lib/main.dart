@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: AppBarTheme(color: cWhite),
       ),
       debugShowCheckedModeBanner: false,
-      initialRoute: AppRoutes.userprofilepage,
+      initialRoute: AppRoutes.homeScreen,
       routes: AppRoutes.getRoutes(),
     );
   }
