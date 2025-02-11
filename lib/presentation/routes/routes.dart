@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kartify_applicaion/presentation/screens/home/homescreen.dart';
 import 'package:kartify_applicaion/presentation/screens/login_screen.dart';
-import 'package:kartify_applicaion/presentation/screens/profile.dart';
+import 'package:kartify_applicaion/presentation/screens/profile/profile_screen.dart';
 import 'package:kartify_applicaion/presentation/screens/sign_in_screen.dart';
 import 'package:kartify_applicaion/presentation/screens/splash_screen.dart';
 
@@ -18,7 +18,7 @@ class AppRoutes {
       splashScreen: (context) => const SplashScreen(),
       signinScreen: (context) => const SignInScreen(),
       homeScreen: (context) =>  Homescreen(),
-      userprofilepage: (context) =>  UserProfilepage(),
+      userprofilepage: (context) =>  UserProfileScreen(),
     };
   }
 }

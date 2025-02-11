@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kartify_applicaion/colors/colors.dart';
-import 'package:kartify_applicaion/fonts/normal_font.dart';
+import 'package:kartify_applicaion/presentation/colors/colors.dart';
+import 'package:kartify_applicaion/presentation/fonts/normal_font.dart';
 import 'package:kartify_applicaion/screens/profile/widget/profile_contents.dart';
 
 class UserProfileScreen extends StatelessWidget {
@@ -9,42 +9,44 @@ class UserProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 212, 228, 254),
+      backgroundColor: const Color.fromARGB(255, 212,228,254),
       body: Column(
         children: [
           Expanded(
-            flex: 1,
+            flex: 3,
             child: SizedBox(
               width: double.infinity,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  // Stack(
-                  //   children: [
-                  //     CircleAvatar(
-                  //       radius: 50,
-                  //       backgroundImage:
-                  //           AssetImage("assets/images/profile_women.png"),
-                  //     ),
-                  //     Padding(
-                  //         padding: const EdgeInsets.only(left: 60, top: 60),
-                  //         child: CircleAvatar(
-                  //           backgroundColor: Colors.lightBlueAccent,
-                  //           radius: 20,
-                  //         ),
-                  //         )
-                  //   ],
-                  // ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 10),
-                    child: NormalTextWidget(text: "Smitha Williams"),
-                  )
-                ],
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Stack(
+                      children: [
+                        CircleAvatar(
+                          radius: 55,
+                          backgroundImage:
+                              AssetImage("assets/images/profile_women.png"),
+                        ),
+                        Padding(
+                            padding: const EdgeInsets.only(left: 80, top: 80),
+                            child: CircleAvatar(
+                              backgroundColor: Colors.lightBlueAccent,
+                              radius: 20,
+                            ),
+                            )
+                      ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: NormalTextWidget(text: "Smitha Williams",fontWeight: FontWeight.w600,fontSize: 18,),
+                    )
+                  ],
+                ),
               ),
             ),
           ),
           Expanded(
-            flex: 1,
+            flex: 2,
             child: Container(
               decoration: BoxDecoration(
                   color: cWhite,
@@ -82,7 +84,7 @@ class UserProfileScreen extends StatelessWidget {
             ),
           ),
           Expanded(
-            flex: 4,
+            flex: 6,
             child: Container(
               color: cWhite,
               child: Padding(
@@ -90,12 +92,13 @@ class UserProfileScreen extends StatelessWidget {
                 child: ListView.separated(
                     itemBuilder: (context, index) {
                       return SizedBox(
-                        height: 25,
+                        height: 30,
                         child: Row(
                           children: [
                             NormalTextWidget(
                               text: optionList[index],
-                              fontSize: 12,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
                             ),
                             Spacer(),
                             Icon(
