@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kartify_applicaion/routes/routes.dart';
+import 'package:kartify_applicaion/presentation/routes/routes.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});

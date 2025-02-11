@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:kartify_applicaion/fonts/normal_font.dart';
-import 'package:kartify_applicaion/routes/routes.dart';
-import 'package:kartify_applicaion/widgets/login_conainer_widget.dart';
+import 'package:kartify_applicaion/presentation/fonts/normal_font.dart';
+import 'package:kartify_applicaion/presentation/routes/routes.dart';
+import 'package:kartify_applicaion/presentation/widgets/login_conainer_widget.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  LoginScreenState createState() => LoginScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen>
+class LoginScreenState extends State<LoginScreen>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late List<ScrollController> _scrollControllers;

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kartify_applicaion/colors/colors.dart';
-import 'package:kartify_applicaion/fonts/normal_font.dart';
+import 'package:kartify_applicaion/presentation/colors/colors.dart';
+import 'package:kartify_applicaion/presentation/fonts/normal_font.dart';
 
 class TextFormFieldContainerWidget extends StatelessWidget {
-  TextEditingController? controller = TextEditingController();
+ TextEditingController? controller = TextEditingController();
   final String title;
   final String hintText;
   final double width;
@@ -12,7 +12,7 @@ class TextFormFieldContainerWidget extends StatelessWidget {
   Iterable<String>? autofillHints;
   String? Function(String?)? validator;
   Function()? onTap;
-  TextInputType? keyboardType;
+ final TextInputType? keyboardType;
 
   TextFormFieldContainerWidget({
     required this.hintText,

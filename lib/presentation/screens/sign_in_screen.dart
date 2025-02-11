@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:kartify_applicaion/constants/sizes.dart';
-import 'package:kartify_applicaion/fonts/normal_font.dart';
-import 'package:kartify_applicaion/widgets/textfont_widget/text.font_widget.dart';
+import 'package:kartify_applicaion/presentation/constants/sizes.dart';
+import 'package:kartify_applicaion/presentation/fonts/normal_font.dart';
+import 'package:kartify_applicaion/presentation/widgets/textfont_widget/text.font_widget.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});

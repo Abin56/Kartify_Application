@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kartify_applicaion/constants/sizes.dart';
-import 'package:kartify_applicaion/fonts/normal_font.dart';
+import 'package:kartify_applicaion/presentation/constants/sizes.dart';
+import 'package:kartify_applicaion/presentation/fonts/normal_font.dart';
 
 class DrawerWidget extends StatelessWidget {
   const DrawerWidget({

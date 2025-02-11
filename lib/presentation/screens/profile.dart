@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kartify_applicaion/fonts/normal_font.dart';
 
 class UserProfilepage extends StatelessWidget {
   const UserProfilepage({super.key});

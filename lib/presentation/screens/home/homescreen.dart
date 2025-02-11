@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:kartify_applicaion/colors/colors.dart';
-import 'package:kartify_applicaion/screens/cart/cart_screen.dart';
-import 'package:kartify_applicaion/screens/category/category_screen.dart';
-import 'package:kartify_applicaion/screens/home/drawer/drawer.dart';
-import 'package:kartify_applicaion/screens/home/nav_bar/nav_bar.dart';
-import 'package:kartify_applicaion/screens/profile/profile_screen.dart';
-import 'package:kartify_applicaion/screens/wishlist/wishlist_screen.dart';
+import 'package:kartify_applicaion/presentation/colors/colors.dart';
+import 'package:kartify_applicaion/presentation/screens/cart/cart_screen.dart';
+import 'package:kartify_applicaion/presentation/screens/category/category_screen.dart';
+import 'package:kartify_applicaion/presentation/screens/home/drawer/drawer.dart';
+import 'package:kartify_applicaion/presentation/screens/home/nav_bar/nav_bar.dart';
+import 'package:kartify_applicaion/presentation/screens/profile/profile_screen.dart';
+import 'package:kartify_applicaion/presentation/screens/wishlist/wishlist_screen.dart';
 
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});

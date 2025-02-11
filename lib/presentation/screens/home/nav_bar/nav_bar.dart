@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kartify_applicaion/colors/colors.dart';
+import 'package:kartify_applicaion/presentation/colors/colors.dart';
 
 BottomNavigationBarItem buildNavItem(
     String imagePath, String label, int index, int selectedIndex) {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kartify_applicaion/colors/colors.dart';
-import 'package:kartify_applicaion/routes/routes.dart';
+import 'package:kartify_applicaion/presentation/colors/colors.dart';
+import 'package:kartify_applicaion/presentation/routes/routes.dart';
 
 void main() {
   runApp(MyApp());

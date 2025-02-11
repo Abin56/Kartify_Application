@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kartify_applicaion/fonts/normal_font.dart';
+import 'package:kartify_applicaion/presentation/fonts/normal_font.dart';
 
 class UserProfileScreen extends StatelessWidget {
   const UserProfileScreen({super.key});
