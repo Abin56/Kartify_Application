@@ -19,7 +19,7 @@ class _HomescreenState extends State<Homescreen> {
 
   // List of pages corresponding to the navbar index
   final List<Widget> _pages = [
-    UserProfileScreen(), // Index 0 (Fixed Circular Reference)
+    CartScreen(), // Index 0 (Fixed Circular Reference)
     CategoryScreen(), // Index 1
     CartScreen(), // Index 2
     WishListScreen(), // Index 3
